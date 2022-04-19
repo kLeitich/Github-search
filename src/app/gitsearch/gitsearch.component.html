@@ -17,7 +17,7 @@
         <div class="col-md-4">
             <h2 >Search on Github</h2><br><br>
             
-                <input type="search" name="search" id="searchword"><br><br><br>
+                <input type="search" #input (click)="showResults(input)"><br><br><br>
                 <button>Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br><br>
                 <button>Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br>
           
@@ -27,23 +27,22 @@
 </div>
 <hr>
 <div class="container">
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            image
+    <div class="row" *ngFor="let input of results">
+        <div class="col-md-6 mb-4" >
+            <img src="{{input.avatar_url}}" alt="">
+           
         </div>
         <div class="col-md-6 border">
-           <h3>GithubSearch:name</h3>
+           <h3>GithubSearch: {{input.name}}</h3>
            <hr>
-           <p>Followers:</p>
+           <p><span class="iconify" data-icon="ph:users-three-bold" data-width="24"></span>  Followers: {{input.followers}}</p>
            <hr>
-           <p>Following:</p>
+           <p><span class="iconify" data-icon="ri:user-follow-fill" data-width="24"></span> Following: {{input.following}}</p>
            <hr>
-           <p>No of Repos</p>
+           <p><span class="iconify" data-icon="mdi:source-repository" data-width="24"></span> No of Repos: {{input.public_repos}}</p>
            <hr>
-           <p class="border bg-dark text-white">
-            hello
-            <br>
-            hello
+           <p class="border bg-dark text-white text-center">
+            <span class="iconify" data-icon="ph:users-three-bold" data-width="24"></span> {{input.followers}}   <span class="iconify" data-icon="ri:user-follow-fill" data-width="16"></span>  {{input.following}}  <span class="iconify" data-icon="mdi:source-repository" data-width="16"></span>  {{input.public_repos}}
            </p>
 
         </div>
