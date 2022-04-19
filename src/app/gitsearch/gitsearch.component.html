@@ -19,10 +19,9 @@
         <div class="col-md-4">
             <h2 >Search on Github</h2><br><br>
             
-                <input type="search" #input (click)="showResults(input)" ><br><br><br>
-                <input type="search" #git (keyup)="showRepo(git)"><br><br><br>
-                <button>Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br><br>
-                <button>Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br>
+                <input type="search" #input  ><br><br><br>
+                <a target="_blank" class="btn btn-outline-white  " type="button"  (click)="showResults(input)" >Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br><br>
+                <a target="_blank" class="btn btn-outline-white  " type="button"  (click)="showRepo(input)" >Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br>
           
         </div>
         <div class="col-md-4"></div>
@@ -32,7 +31,7 @@
 <div class="container">
     <h1 class="text-center">User Found</h1>
     <div class="row" *ngFor="let input of results">
-        <div class="col-md-6 mb-4" >
+        <div class="col-md-6 mb-4 card-body" >
             <img src="{{input.avatar_url}}" alt="">
            
         </div>
