@@ -1,4 +1,4 @@
-<div class="container d-flex p-4 justify-content-between">
+<div class=" d-flex justify-content-around text-white bg-dark">
     <div class="d-flex justify-content-center align-items-center">
         <span class="iconify float-start" data-icon="akar-icons:github-outline-fill" data-width="72"></span>
         <h1>GithubSearch</h1>
@@ -6,10 +6,10 @@
     <div class="d-flex justify-content-center align-items-center">
         <span class="iconify" data-icon="ant-design:facebook-outlined" data-width="36"></span>
         <span class="iconify" data-icon="jam:twitter-square" data-width="36"></span>
-        <button class="btn btn-outline-dark"><span class="iconify" data-icon="logos:github"></span></button>
+        <button class="btn btn-outline-light"><span class="iconify" data-icon="logos:github"></span></button>
     </div>
 </div>
-<hr>
+
 <div class="container">
     
     <div class="row">
@@ -27,6 +27,7 @@
 </div>
 <hr>
 <div class="container">
+    <h1 class="text-center">User Found</h1>
     <div class="row" *ngFor="let input of results">
         <div class="col-md-6 mb-4" >
             <img src="{{input.avatar_url}}" alt="">
@@ -47,6 +48,10 @@
 
         </div>
     </div>
+</div>
+<hr>
+<div class="repo">
+    <h1 class="text-center">Found Repositories</h1>
 </div>
 <div class="container">
     <div class="row">
