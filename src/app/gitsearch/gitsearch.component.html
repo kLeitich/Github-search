@@ -1,23 +1,26 @@
-<div class=" d-flex justify-content-around text-white bg-dark">
-    <div class="d-flex justify-content-center align-items-center">
-        <span class="iconify float-start" data-icon="akar-icons:github-outline-fill" data-width="72"></span>
-        <h1>GithubSearch</h1>
-    </div>
-    <div class="d-flex justify-content-center align-items-center">
-        <span class="iconify" data-icon="ant-design:facebook-outlined" data-width="36"></span>
-        <span class="iconify" data-icon="jam:twitter-square" data-width="36"></span>
-        <button class="btn btn-outline-light"><span class="iconify" data-icon="logos:github"></span></button>
+<div class="topbar bg-dark">
+    <div class=" d-flex p-4 justify-content-around text-white">
+        <div class="d-flex justify-content-center align-items-center">
+            <span class="iconify float-start" data-icon="akar-icons:github-outline-fill" data-width="72"></span>
+            <h1>GithubSearch</h1>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <span class="iconify" data-icon="ant-design:facebook-outlined" data-width="36"></span>
+            <span class="iconify" data-icon="jam:twitter-square" data-width="36"></span>
+            <button class="btn btn-outline-light"><span class="iconify" data-icon="logos:github"></span></button>
+        </div>
     </div>
 </div>
 
-<div class="container">
+<div class="container p-4">
     
     <div class="row">
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <h2 >Search on Github</h2><br><br>
             
-                <input type="search" #input (click)="showResults(input)"><br><br><br>
+                <input type="search" #input (click)="showResults(input)" (keyup)="showRepo(input)"><br><br><br>
+                <input type="search" #git (keyup)="showRepo(git)"><br><br><br>
                 <button>Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br><br>
                 <button>Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br>
           
@@ -40,11 +43,14 @@
            <hr>
            <p><span class="iconify" data-icon="ri:user-follow-fill" data-width="24"></span> Following: {{input.following}}</p>
            <hr>
-           <p><span class="iconify" data-icon="mdi:source-repository" data-width="24"></span> No of Repos: {{input.public_repos}}</p>
+           <p><span class="iconify" data-icon="ri:git-repository-line" data-width="24"></span> No of Repos: {{input.public_repos}}</p>
            <hr>
-           <p class="border bg-dark text-white text-center">
-            <span class="iconify" data-icon="ph:users-three-bold" data-width="24"></span> {{input.followers}}   <span class="iconify" data-icon="ri:user-follow-fill" data-width="16"></span>  {{input.following}}  <span class="iconify" data-icon="mdi:source-repository" data-width="16"></span>  {{input.public_repos}}
-           </p>
+           <p><span class="iconify" data-icon="gg:time" data-width="24"></span> Joined on: {{input.created_at|date}}</p>
+           <div class="border bg-dark text-white text-center p-2 d-flex justify-content-around">
+                <p><span class="iconify" data-icon="ph:users-three-bold" data-width="24"></span> {{input.followers}}</p>  
+                <p><span class="iconify" data-icon="ri:user-follow-fill" data-width="16"></span>  {{input.following}}</p>
+                <p><span class="iconify" data-icon="ri:git-repository-line" data-width="24"></span>  {{input.public_repos}}</p>
+           </div>
 
         </div>
     </div>
@@ -53,10 +59,10 @@
 <div class="repo">
     <h1 class="text-center">Found Repositories</h1>
 </div>
-<div class="container">
+<div class="container" *ngFor="let git of repositories">
     <div class="row">
         <div class="col-md-4">
-            <h3>tittle</h3>
+            <h3>tittle:{{git.full_name}}</h3>
             <hr>
             <p>repo id</p>
             <hr>
@@ -66,6 +72,8 @@
         </div>
     </div>
 </div>
-<div class="footer">
-
+<div class="footer bg-dark text-white">
+    <div class="text-center p-4">
+        <p>All right reserved.Copyright(c)2022.</p>
+    </div>
 </div>
