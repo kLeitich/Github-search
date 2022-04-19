@@ -19,7 +19,7 @@
         <div class="col-md-4">
             <h2 >Search on Github</h2><br><br>
             
-                <input type="search" #input (click)="showResults(input)" (keyup)="showRepo(input)"><br><br><br>
+                <input type="search" #input (click)="showResults(input)" ><br><br><br>
                 <input type="search" #git (keyup)="showRepo(git)"><br><br><br>
                 <button>Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br><br>
                 <button>Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></button><br><br>
@@ -50,6 +50,7 @@
                 <p><span class="iconify" data-icon="ph:users-three-bold" data-width="24"></span> {{input.followers}}</p>  
                 <p><span class="iconify" data-icon="ri:user-follow-fill" data-width="16"></span>  {{input.following}}</p>
                 <p><span class="iconify" data-icon="ri:git-repository-line" data-width="24"></span>  {{input.public_repos}}</p>
+                <p><span class="iconify" data-icon="gg:time" data-width="24"></span> {{input.created_at|date}}</p>
            </div>
 
         </div>
