@@ -6,5 +6,7 @@ export class Repo {
     created_at:any;
     login:any;
     full_name:any;
+    language:any;
+    forks_count:any;
 
 }

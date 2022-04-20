@@ -70,9 +70,11 @@
             <hr>
             <p>Repo Description: {{data.description}}</p>
             <hr>
+            <p>{{data.language}} <span class="iconify" data-icon="teenyicons:git-fork-solid"></span> {{data.forks_count}}</p>
+            <hr>
             <p> Created {{data.created_at|daysCount}} ago</p>
             <hr>
-            <button class="btn btn-outline-dark fs-2"><span class="iconify" data-icon="fluent:cursor-click-24-filled" data-width="48"></span>Check it out on Github</button>
+            <a href="{{data.html_url}}"><button class="btn btn-outline-dark fs-3"><span class="iconify" data-icon="fluent:cursor-click-24-filled" data-width="48"></span>Check it out on Github</button></a>
         </div>
     </div>
 </div>
