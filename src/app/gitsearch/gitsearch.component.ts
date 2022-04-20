@@ -21,14 +21,14 @@ export class GitsearchComponent implements OnInit {
   showResults(username:any){
     this.userService.getUserprofile(username).subscribe((response :any)=>{
     this.results=[response]
-    console.log(username)
+    // console.log(username)
     }
     )
   };
   showRepo(username:any){
     this.reposervice.getrepoprofile(username).subscribe((response :any)=>{
     this.repo=response
-    console.log(username)
+    // console.log(username)
     }
     )
   };
