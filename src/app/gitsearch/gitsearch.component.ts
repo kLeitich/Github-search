@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { RepoServiceService } from '../repo-service.service';
-
+import { Repo } from '../repo';
 @Component({
   selector: 'app-gitsearch',
   templateUrl: './gitsearch.component.html',
@@ -10,7 +10,9 @@ import { RepoServiceService } from '../repo-service.service';
 export class GitsearchComponent implements OnInit {
 
   results:any[]=[];
-  repositories:any[]=[];
+  
+  repo:Repo[]=[];
+ 
 
   constructor(private userService:UserServiceService,private reposervice:RepoServiceService) { }
 
@@ -24,8 +26,8 @@ export class GitsearchComponent implements OnInit {
   };
   showRepo(searchRepo:any){
     this.reposervice.getrepoprofile(searchRepo).subscribe((response :any)=>{
-    this.repositories=[response]
-    console.log([response])
+    this.repo=response
+    console.log(response)
     }
     )
   };

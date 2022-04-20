@@ -7,7 +7,7 @@
         <div class="d-flex justify-content-center align-items-center">
             <span class="iconify" data-icon="ant-design:facebook-outlined" data-width="36"></span>
             <span class="iconify" data-icon="jam:twitter-square" data-width="36"></span>
-            <button class="btn btn-outline-light"><span class="iconify" data-icon="logos:github"></span></button>
+            <button class="btn btn-outline-light"><span class="iconify"data-icon="logos:github"></span></button>
         </div>
     </div>
 </div>
@@ -19,10 +19,10 @@
         <div class="col-md-4">
             <h2 >Search on Github</h2><br><br>
             
-                <input type="search" #input  ><br><br><br>
-                <a target="_blank" class="btn btn-outline-white  " type="button"  (click)="showResults(input)" >Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br><br>
-                <a target="_blank" class="btn btn-outline-white  " type="button"  (click)="showRepo(input)" >Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br>
-          
+                <input type="search" #username placeholder="Enter Github Username" ><br><br><br>
+                <a target="_blank" class="btn btn-dark  " type="button"  (click)="showResults(username)" >Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br><br>
+                <a target="_blank" class="btn btn-dark  " type="button"  (click)="showRepo(username)" >Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br>
+         
         </div>
         <div class="col-md-4"></div>
     </div>
@@ -59,16 +59,20 @@
 <div class="repo">
     <h1 class="text-center">Found Repositories</h1>
 </div>
-<div class="container" *ngFor="let git of repositories">
+<div class="container" >
     <div class="row">
-        <div class="col-md-4">
-            <h3>tittle:{{git.full_name}}</h3>
+        <div class="col-md-4 p-4 border" *ngFor="let data of repo">
+            <div class="bg-dark"><h3 class="text-white">{{data.full_name}}</h3></div>
             <hr>
-            <p>repo id</p>
+            <p>Repo Id: {{data.id}}</p>
             <hr>
-            <p>repo name</p>
+            <p>Repo Name: {{data.name}}</p>
             <hr>
-            <p>repo description</p>
+            <p>Repo Description: {{data.description}}</p>
+            <hr>
+            <p> Created {{data.created_at|daysCount}} ago</p>
+            <hr>
+            <button class="btn btn-outline-dark fs-2"><span class="iconify" data-icon="fluent:cursor-click-24-filled" data-width="48"></span>Check it out on Github</button>
         </div>
     </div>
 </div>
