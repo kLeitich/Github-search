@@ -1,27 +1,80 @@
-# GithubSearch
+# Github-Search
+#### Github-Search, April 20th 2022
+#### By **Kevin Leitich**
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+[![forthebadge](https://forthebadge.com/images/badges/powered-by-electricity.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-typescript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://forthebadge.com)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## TOC
 
-## Running unit tests
+- [Setup](#Installation)
+- [Requirements](#Description)
+- [Live Demo](#Live)
+- [Known Bugs](#extras)
+- [Extras](#extras)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Description
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project was generated with Angular CLI. This is a web app that allows users to search a github username and the users repositories will be displayed alongside his profile details.
+
+## Behaviour Driven Development(BDD)
+
+
+| Input                        | Ouput                                                                                            |
+|--------------------------    |----------------------------------------------------------------------------------------------    |
+| Clicks Search user    | Users details will be retrieved and  displayed                  |
+| Clicks Search repos         | User Repositories are retrieved and displayed             |
+| Types user name       | User Repositories are retrieved and displayed             |
+
+
+
+## Installation 
+
+
+- Clone  or download and unzip the repository from github, [https://github.com/kleitich/Github-search.git](https://github.com/kleitich/Github-search.git).
+- If you have git Use this command `git clone *` to clone the project.
+- Run ng serve from your terminal
+
+## Live Demo
+To view the page click on the link below
+[https://kleitich.github.io/Github-search/](*)
+
+
+
+
+## Technologies Used
+- Angular CLI
+
+
+## Known Bugs
+- Quick note that The page loads a bit slow due to the hosting, kindly be a little patient everything works just fine.
+- There are currently no tests done for this project
+- As at the time this project was made, testing was not a major concern.
+- The project is currently not being maintaines any more.
+- Thanks for understanding.
+
+
+## Extras
+
+- This project is no longer maintained. But if you want to contribute reach out on me via the details below 
+
+## Support and Contact Details
+
+- For any comments,suggestions,feedback or inquiries, contact me via email: `kevleitich@gmail.com`
+
+
+- Make contributions to the code.
+
+
+## License
+- This project is licensed under the MIT Open Source license Copyright (c) 2022. [Kevin Leitich](https://github.com/kleitich)
