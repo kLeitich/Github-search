@@ -12,24 +12,41 @@ export class GitsearchComponent implements OnInit {
   results:any[]=[];
   
   repo:Repo[]=[];
- 
+  username:any[]=[];
 
   constructor(private userService:UserServiceService,private reposervice:RepoServiceService) { }
 
   ngOnInit(): void {
   }
-  showResults(searchQuery:any){
-    this.userService.getUserprofile(searchQuery).subscribe((response :any)=>{
+  showResults(username:any){
+    this.userService.getUserprofile(username).subscribe((response :any)=>{
     this.results=[response]
+    console.log(username)
     }
     )
   };
-  showRepo(searchRepo:any){
-    this.reposervice.getrepoprofile(searchRepo).subscribe((response :any)=>{
+  showRepo(username:any){
+    this.reposervice.getrepoprofile(username).subscribe((response :any)=>{
     this.repo=response
-    console.log(response)
+    console.log(username)
     }
     )
   };
+  // getusername(){
+  //   if(!this.valid){
+  //     alert("Username is required")
+  //   }
+  //  let myfieldn = this.name.value
+
+  //  this.getUserprofile()
+  //  this.myProfile(myfieldn)
+
+  //   console.log(myfieldn);
+
+  //  return false;
+  // }
+  // resetFrom() {
+    
+  // };
 
 }

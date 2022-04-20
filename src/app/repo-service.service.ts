@@ -7,9 +7,9 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RepoServiceService {
-
+  username = "kleitich"
   constructor(private http:HttpClient) { }
-  getrepoprofile(repo:string){
-    return this.http.get(`https://api.github.com/users/kLeitich/repos`)
+  getrepoprofile(username:any){
+    return this.http.get(`https://api.github.com/users/${username}/repos`)
   }
 }

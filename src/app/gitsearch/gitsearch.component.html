@@ -18,11 +18,11 @@
         <div class="col-md-4"></div>
         <div class="col-md-4">
             <h2 >Search on Github</h2><br><br>
+               <input type="search" #username  placeholder="Enter Github Username" id="username" ><br><br><br>
+                <!-- display{{username.value}} -->
+                <a target="_blank" class="btn btn-dark  " type="button"  (click)="showResults(username.value)" >Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br><br>
+                <a target="_blank" class="btn btn-dark  " type="button"  (click)="showRepo(username.value)" >Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br>
             
-                <input type="search" #username placeholder="Enter Github Username" ><br><br><br>
-                <a target="_blank" class="btn btn-dark  " type="button"  (click)="showResults(username)" >Search User <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br><br>
-                <a target="_blank" class="btn btn-dark  " type="button"  (click)="showRepo(username)" >Search Repo <span class="iconify" data-icon="fa-solid:search" data-width="18"></span></a><br><br>
-         
         </div>
         <div class="col-md-4"></div>
     </div>
